@@ -6,6 +6,9 @@ requested URL for every incoming request.
 
   Express.js middleware that not only logs the timestamp and requested URL but also includes additional information such as the HTTP method, request parameters, query parameters, request headers, and response status.
 
+Prerequisites:
+
+npm install express mongoose
 
 
   js:
