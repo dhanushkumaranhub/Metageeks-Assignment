@@ -1,1 +1,69 @@
 
+Database Concepts (5 points):
+
+● Explain the difference between SQL and NoSQL databases. Provide
+examples of use cases for each.
+
+
+#SQL Databases:
+
+Structured Query Language (SQL):
+
+SQL databases are relational databases that use a structured query language (SQL) for defining and manipulating the data. Examples of SQL databases include MySQL, PostgreSQL, Oracle, and Microsoft SQL Server.
+Schema and Table Structure:
+
+SQL databases are table-based, and they follow a predefined schema, which means the structure of the data (columns and data types) is defined before inserting data.
+ACID Properties:
+
+SQL databases adhere to ACID properties (Atomicity, Consistency, Isolation, Durability), ensuring the reliability of transactions.
+Use Cases:
+
+SQL databases are suitable for applications with complex queries and transactions, such as:
+Financial applications (e.g., banking systems)
+Enterprise systems
+E-commerce platforms
+Applications with well-defined schemas and relationships
+
+
+
+#NoSQL Databases:
+
+Not Only SQL (NoSQL):
+
+NoSQL databases are non-relational databases that can store and process a variety of data models. Examples include MongoDB, CouchDB, Cassandra, and Redis.
+Schemaless and Flexible:
+
+NoSQL databases are schema-less, allowing for the storage of unstructured or semi-structured data. They are more flexible in terms of data representation.
+CAP Theorem:
+
+NoSQL databases often follow the principles of the CAP theorem (Consistency, Availability, Partition Tolerance). Different NoSQL databases prioritize different aspects of the CAP theorem based on their use cases.
+
+
+#Use Cases:
+
+NoSQL databases are suitable for applications with large amounts of unstructured or semi-structured data, and where scalability and flexibility are critical. Use cases include:
+Content management systems
+Real-time big data applications
+Internet of Things (IoT) applications
+Social media platforms
+
+
+
+#Comparison:
+
+Scalability:
+
+SQL databases are typically scaled vertically by increasing the horsepower of the existing server. NoSQL databases are often designed for horizontal scalability, distributed across multiple servers.
+Data Model:
+
+SQL databases use a fixed schema and are best suited for applications with a clear and stable data structure. NoSQL databases are schema-less or use a dynamic schema, making them suitable for evolving data structures.
+Query Language:
+
+SQL databases use a standardized query language (SQL) for defining and manipulating the data. NoSQL databases often have their own query languages tailored to their data models.
+Consistency and Transactions:
+
+SQL databases prioritize consistency and support transactions to ensure the integrity of the data. NoSQL databases may sacrifice consistency for availability and partition tolerance in certain scenarios.
+Examples:
+
+SQL: MySQL, PostgreSQL
+NoSQL: MongoDB, Cassandra
