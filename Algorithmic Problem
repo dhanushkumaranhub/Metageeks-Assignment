@@ -1,1 +1,33 @@
-i
+Algorithmic Problem (10 points):
+
+● Implement a function in a language of your choice that checks if a
+given string is a palindrome.
+
+
+function isPalindrome(str) {
+  // Remove non-alphanumeric characters and convert to lowercase
+  const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+  // Compare the original and reversed strings
+  return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
+// Example usage:
+const testString1 = "A man, a plan, a canal, Panama!";
+const testString2 = "Not a palindrome";
+
+console.log(isPalindrome(testString1)); // Output: true
+console.log(isPalindrome(testString2)); // Output: false
+
+
+
+Explanation:
+
+Cleaning the String:
+The function uses a list comprehension to create a cleaned string by joining alphanumeric characters in lowercase.
+
+Comparison:
+The cleaned string is compared with its reverse (cleaned_str[::-1]) to check if it reads the same forward and backward.
+
+Example Usage:
+The function is tested with two example strings (test_string1 and test_string2) to demonstrate its usage.
