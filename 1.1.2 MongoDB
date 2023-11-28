@@ -1,1 +1,59 @@
 
+MongoDB Aggregation Framework to perform a $lookup operation to join the Post collection with the User collection. This will allow you to retrieve posts along with the associated user details.
+
+js:
+
+db.Post.aggregate([
+  {
+    $match: {
+      author: ObjectId("userObjectId"), // Replace with the ObjectId of the specific user
+    },
+  },
+  {
+    $lookup: {
+      from: "User",
+      localField: "author",
+      foreignField: "_id",
+      as: "userDetails",
+    },
+  },
+  {
+    $unwind: "$userDetails",
+  },
+  {
+    $project: {
+      _id: 1,
+      title: 1,
+      content: 1,
+      created_at: 1,
+      user: {
+        _id: "$userDetails._id",
+        username: "$userDetails.username",
+        email: "$userDetails.email",
+        fullName: "$userDetails.fullName",
+        created_at: "$userDetails.created_at",
+      },
+    },
+  },
+]);
+
+....................................................................................................................................................................................
+
+
+Explanation:
+
+$match Stage:
+Filters the posts based on the specified user's ObjectId.
+
+$lookup Stage:
+Performs a left outer join with the User collection.
+Connects the author field in the Post collection with the _id field in the User collection.
+Stores the user details in an array called userDetails.
+
+$unwind Stage:
+Deconstructs the userDetails array, creating a new document for each element.
+
+$project Stage:
+Shapes the output of the aggregation.
+Selects specific fields from the Post collection.
+Embeds the user details within each post.
