@@ -1,3 +1,9 @@
+MongoDB Schema Design (5 points):
+
+● Design a MongoDB schema for a blog application with the following
+entities: User, Post, and Comment. Include relevant fields and
+relationships.
+
 
 Prerequisites:
 
