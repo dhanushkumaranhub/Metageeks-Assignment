@@ -1,3 +1,8 @@
+MongoDB Query (5 points):
+
+● Write a MongoDB query to find all posts created by a specific user,
+including the user details.
+
 
 MongoDB Aggregation Framework to perform a $lookup operation to join the Post collection with the User collection. This will allow you to retrieve posts along with the associated user details.
 
